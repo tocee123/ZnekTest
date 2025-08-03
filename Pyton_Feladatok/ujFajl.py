@@ -1,4 +1,4 @@
-def greet(name): 
+def GreetTheName(name): 
     """ This function greets the person passed into the name parameter name: The name of the person to greet :return: A greeting message """ 
     return f'Hello, {name}!'
 
