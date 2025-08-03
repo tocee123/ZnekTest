@@ -4,7 +4,7 @@ while play == "y":
     number_to_guess = random.randint(1,100)
     print("I thought a number.")
     
-    for i in range(1, 11):
+    for i in range(1, 3):
         match i:   
             case i if i==1:
                 countw=f"{i}st"
@@ -42,23 +42,14 @@ while play == "y":
     
     play = ""
     
-    while play != "y" or play != "n":
-        play = input("Do you want to play again?   Yes [y]   No [n]")
-        match play:
-            case play if play == "n":
-                print("")
-                print ("end")
-                print("")
-                break
-            case play if play == "y":
-                play = "y"
-                print("")
-                print ("Let's play again!")
-                print("")
-                break
-            case play if play != "y" or play != "n":
-                play = input("Do you want to play again?   Yes [y]   No [n]")
-
+    while play not in ['n', 'y']:
+        play = input("Do you want to play again?Yes [y]   No [n]")
+        if play == "n":
+            print ("\nend\n")
+            break
+        if play == "y":
+            print ("\nLet's play again!\n")
+            break
         
 
 print("")
