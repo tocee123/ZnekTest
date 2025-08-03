@@ -4,14 +4,14 @@ while play == "y":
     number_to_guess = random.randint(1,100)
     print("I thought a number.")
     
-    for i in range(0,11):
-        match i:
-            case i if i==0:
-                countw=str(i+1)+"st"
+    for i in range(1, 11):
+        match i:   
             case i if i==1:
-                countw=str(i+1)+"nd"
+                countw=f"{i}st"
             case i if i==2:
-                countw=str(i+1)+"rd"
+                countw=f"{i}nd"
+            case i if i==3:
+                countw=f"{i}rd"
             case i if 2<i<10:
                 countw=str(i+1)+"th"
             case i if i == 10:
