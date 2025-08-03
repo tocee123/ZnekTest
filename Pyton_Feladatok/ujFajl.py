@@ -11,5 +11,5 @@ def CreateListWithXNumberOfRandomIntegers(x:int) -> list[int]:
         raise Exception(f"{x}should be positive integer!")
     return [randint(100, 1000) for _ in range(x)]
 
-listam = CreateListWithXNumberOfRandomIntegers(10)
+listam = CreateListWithXNumberOfRandomIntegers("asdada")
 print(listam)
