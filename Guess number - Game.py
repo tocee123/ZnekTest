@@ -6,11 +6,11 @@ while play == "y":
     
     for i in range(1, 3):
         match i:   
-            case i if i==1:
+            case 1:
                 countw=f"{i}st"
-            case i if i==2:
+            case 2:
                 countw=f"{i}nd"
-            case i if i==3:
+            case 3:
                 countw=f"{i}rd"
             case i if 2<i<10:
                 countw=str(i+1)+"th"
@@ -20,13 +20,13 @@ while play == "y":
                 print("")
                 break
                 
-        user_guess = input("Make your "+countw+" guess between 1 and 100:")
+        user_guess = input(f"Make your {countw} guess between 1 and 100:")
     
         while (user_guess == ""):
-            user_guess = input("Make your "+countw+" guess between 1 and 100:")
+            user_guess = input(f"Make your {countw} guess between 1 and 100:")
     
         user_guess = int(user_guess)
-        
+
         if number_to_guess < user_guess:
             print(user_guess, "is too big.")
         if number_to_guess > user_guess:
@@ -46,6 +46,3 @@ while play == "y":
         if play == "y":
             print ("\nLet's play again!\n")
             break
-        
-
-print("")
