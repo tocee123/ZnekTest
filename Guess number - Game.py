@@ -27,16 +27,12 @@ while play == "y":
     
         user_guess = int(user_guess)
         
-        match (number_to_guess,user_guess):
-            case (x,y) if x < y:
-                print(user_guess, "is too big.")
-            case (x,y) if x > y:
-                print(user_guess,"is too small.")
-            case (x,y) if x == y:
-                print("Correct! You guessed", number_to_guess,".")
-                break
-            case _:
-                print("Unexpected input")
+        if number_to_guess < user_guess:
+            print(user_guess, "is too big.")
+        if number_to_guess > user_guess:
+            print(user_guess,"is too small.")
+        if number_to_guess == user_guess:
+            print("Correct! You guessed", number_to_guess,".")
         
     print("")
     
