@@ -1,24 +1,21 @@
 import random
+
+def getOrderedNumberWithSuffix(i : int):
+    return f"{i}th" if i > 3 else f"{i}{['st', 'nd', 'rd'][i-1]}"
+
+max = 3
 play = "y"
+
 while play == "y":
     number_to_guess = random.randint(1,100)
     print("I thought a number.")
     
-    for i in range(1, 3):
-        match i:   
-            case 1:
-                countw=f"{i}st"
-            case 2:
-                countw=f"{i}nd"
-            case 3:
-                countw=f"{i}rd"
-            case i if 2<i<10:
-                countw=str(i+1)+"th"
-            case i if i == 10:
-                print("")
-                print ("You guessed too many time. Game over. It was",number_to_guess)
-                print("")
-                break
+    for i in range(1, max):
+        if i == max:
+            print (f"\nYou guessed too many time. Game over. It was {number_to_guess}\n")
+            break
+        
+        countw = getOrderedNumberWithSuffix(i)
                 
         user_guess = input(f"Make your {countw} guess between 1 and 100:")
     
