@@ -1,3 +1,3 @@
 print("hello1")
-nev = "Peter"
+nev = "Zoli"
 print(f"Szia {nev}")
